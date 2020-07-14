@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
+    <id value="nhg-tabel-25-gebruiksvoorschrift-aanvullend-numeriek"/>
+    <language value="nl-NL"/>
+    <url value="https://referentiemodel.nhg.org/tabellen/nhg-tabel-25-gebruiksvoorschrift#aanvullend-numeriek"/>
+    <identifier>
+        <use value="secondary"/>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.5"/>
+    </identifier>
+    <name value="NHGTabel25GebruiksvoorschriftenAanvullendNumeriek"/>
+    <title value="NHG Tabel 25 Gebruiksvoorschriften aanvullend numeriek"/>
+    <status value="active"/>
+    <publisher value="Nederlands Huisartsen Genootschap (NHG)"/>
+    <contact>
+        <name value="Nederlands Huisartsen Genootschap (NHG)"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://nhg.org"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="NHG Tabel 25 Gebruiksvoorschrift (aanvullende teksten numeriek)"/>
+    <copyright value="Nederlands Huisartsen Genootschap (NHG)"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="not-present"/>
+</CodeSystem>

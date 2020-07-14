@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
+    <id value="icpc-1-nl"/>
+    <language value="nl-NL"/>
+    <url value="http://hl7.org/fhir/sid/icpc-1-nl"/>
+    <identifier>
+        <use value="secondary"/>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.31.1"/>
+    </identifier>
+    <name value="NHGTabel24ICPC-1-NL"/>
+    <title value="NHG Tabel 24 ICPC-1-NL"/>
+    <status value="active"/>
+    <publisher value="Nederlands Huisartsen Genootschap (NHG)"/>
+    <contact>
+        <name value="Nederlands Huisartsen Genootschap (NHG)"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://nhg.org"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="De International Classification of Primary Care (ICPC) is in Nederland geaccepteerd als standaard voor coderen en classificeren van klachten, symptomen en aandoeningen in de huisartspraktijk. In Nederland gebruiken huisartsen de ICPC-1. De ICPC is online te doorzoeken met behulp van de [ICPC-zoeker](http://aut.nhg.org/icpczoek/) (externe link). Deze is voorzien van versie 7 van Tabel 24 ICPC. Op de NHG-website is een [kort artikel](https://www.nhg.org/actueel/nieuws/nieuwe-icpc-codes-het-his) (externe link) gepubliceerd over de wijzigingen."></description>
+    <copyright value="Nederlands Huisartsen Genootschap (NHG)"/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="not-present"/>
+</CodeSystem>

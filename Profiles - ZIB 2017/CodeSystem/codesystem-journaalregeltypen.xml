@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
+    <id value="journaalregeltypen"/>
+    <language value="nl-NL"/>
+    <url value="http://fhir.nl/fhir/NamingSystem/journaalregeltypen"/>
+    <identifier>
+        <use value="secondary"/>
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.32.2"/>
+    </identifier>
+    <name value="Journaalregeltype"/>
+    <title value="Journaalregeltype"/>
+    <status value="active"/>
+    <publisher value="Nictiz"/>
+    <contact>
+        <name value="Nictiz"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://nictiz.nl"/>
+            <use value="work"/>
+        </telecom>
+    </contact>
+    <description value="Dit codesysteem definieert de verschillende soorten typen journaalregels die worden gebruikt voor S-O-E-P gebaseerde (huisarts)contactregistratie."/>
+    <caseSensitive value="true"/>
+    <compositional value="false"/>
+    <content value="complete"/>
+    <count value="4"/>
+    <concept>
+        <code value="S"/>
+        <display value="Subjectief"/>
+    </concept>
+    <concept>
+        <code value="O"/>
+        <display value="Objectief"/>
+    </concept>
+    <concept>
+        <code value="E"/>
+        <display value="Evaluatie"/>
+    </concept>
+    <concept>
+        <code value="P"/>
+        <display value="Plan"/>
+    </concept>
+</CodeSystem>
