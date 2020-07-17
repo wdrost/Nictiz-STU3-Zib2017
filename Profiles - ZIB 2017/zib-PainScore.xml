@@ -65,8 +65,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -74,6 +74,10 @@
     <element id="Observation.code.coding:PainScoreCode">
       <path value="Observation.code.coding" />
       <sliceName value="PainScoreCode" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="225908003" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:PainScoreCode.system">
       <path value="Observation.code.coding.system" />

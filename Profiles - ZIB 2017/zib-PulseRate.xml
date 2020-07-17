@@ -58,16 +58,19 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
-        <ordered value="false" />
         <rules value="open" />
       </slicing>
     </element>
     <element id="Observation.code.coding:PulseRate">
       <path value="Observation.code.coding" />
       <sliceName value="PulseRate" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="8893-0" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:PulseRate.system">
       <path value="Observation.code.coding.system" />
@@ -122,14 +125,9 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code.coding.system" />
-        </discriminator>
-        <ordered value="false" />
         <rules value="open" />
       </slicing>
     </element>
@@ -144,6 +142,12 @@
       <comment value="additional codes that translate or map to this code are allowed. For example a more granular LOINC code or code that is used locally in a system." />
       <alias value="Component Test" />
       <alias value="Component Name" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="44969-4" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:PulseRegularity.code.coding">
       <path value="Observation.component.code.coding" />

@@ -50,8 +50,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -63,6 +63,10 @@
       <short value="FamilySituationCode" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="365470003" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:familySituationCode.system">
       <path value="Observation.code.coding.system" />
@@ -96,8 +100,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -106,6 +110,16 @@
       <path value="Observation.component" />
       <sliceName value="familyComposition" />
       <max value="1" />
+    </element>
+    <element id="Observation.component:familyComposition.code">
+      <path value="Observation.component.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="224130005" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:familyComposition.code.coding">
       <path value="Observation.component.code.coding" />
@@ -166,6 +180,16 @@
       <sliceName value="numberOfChildren" />
       <max value="1" />
     </element>
+    <element id="Observation.component:numberOfChildren.code">
+      <path value="Observation.component.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="224118004" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.component:numberOfChildren.code.coding">
       <path value="Observation.component.code.coding" />
       <min value="1" />
@@ -206,6 +230,16 @@
       <path value="Observation.component" />
       <sliceName value="numberOfChildrenLivingAtHome" />
       <max value="1" />
+    </element>
+    <element id="Observation.component:numberOfChildrenLivingAtHome.code">
+      <path value="Observation.component.code.coding" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="55811000146107" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:numberOfChildrenLivingAtHome.code.coding:numberOfChildrenLivingAtHomeCode">
       <path value="Observation.component.code.coding" />
@@ -248,6 +282,16 @@
     <element id="Observation.component:careResponsibility">
       <path value="Observation.component" />
       <sliceName value="careResponsibility" />
+    </element>
+    <element id="Observation.component:careResponsibility.code">
+      <path value="Observation.component.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="406192005" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:careResponsibility.code.coding">
       <path value="Observation.component.code.coding" />
@@ -317,6 +361,16 @@
         <map value="NL-CM:7.13.5" />
         <comment value="LivingAtHome" />
       </mapping>
+    </element>
+    <element id="Observation.component:child.code">
+      <path value="Observation.component.code.coding" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="67822003" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:child.code.coding">
       <path value="Observation.component.code.coding" />

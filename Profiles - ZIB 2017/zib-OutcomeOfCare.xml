@@ -109,8 +109,8 @@
       <path value="DiagnosticReport.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -121,6 +121,10 @@
       <sliceName value="outcomOfCareCode" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="27574-3" />
+      </patternCoding>
     </element>
     <element id="DiagnosticReport.code.coding:outcomOfCareCode.system">
       <path value="DiagnosticReport.code.coding.system" />
@@ -148,7 +152,7 @@
       <slicing>
         <discriminator>
           <type value="profile" />
-          <path value="resolve()" />
+          <path value="$this.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>

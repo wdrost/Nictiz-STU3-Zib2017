@@ -367,8 +367,8 @@
       <path value="Consent.category.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -380,6 +380,10 @@
       <definition value="Category snomed code used for indexing/retrieval of TreatmentDirective." />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="11291000146105" />
+      </patternCoding>
     </element>
     <element id="Consent.category.coding:treatmentDirective.system">
       <path value="Consent.category.coding.system" />

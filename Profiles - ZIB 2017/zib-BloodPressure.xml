@@ -204,14 +204,9 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code.coding.system" />
-        </discriminator>
-        <ordered value="false" />
         <rules value="open" />
       </slicing>
     </element>
@@ -224,6 +219,12 @@
     <element id="Observation.component:SystolicBP.code">
       <path value="Observation.component.code" />
       <comment value="additional codes that translate or map to this code are allowed. For example a more granular LOINC code or code that is used locally in a system." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="8480-6" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:SystolicBP.code.coding">
       <path value="Observation.component.code.coding" />
@@ -279,6 +280,12 @@
       <definition value="The lowest systematic arterial blood pressure - measured in the relaxation stage or diastole of the cardiac cycle." />
       <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system." />
       <alias value="DiastolischeBloeddruk" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="8462-4" />
+        </coding>
+      </patternCodeableConcept>
       <mapping>
         <identity value="hcim-bloodpressure-v1.2-2015EN" />
         <map value="NL-CM:12.4.3" />
@@ -326,6 +333,12 @@
     <element id="Observation.component:AverageBloodPressureLOINC.code">
       <path value="Observation.component.code" />
       <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="8478-0" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:AverageBloodPressureLOINC.code.coding">
       <path value="Observation.component.code.coding" />
@@ -376,6 +389,12 @@
     <element id="Observation.component:AverageBloodPressureSNOMED.code">
       <path value="Observation.component.code" />
       <comment value="additional codes that translate or map to this code are allowed.  For example a more granular SNOMED code or code that is used locally in a system." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="6797001" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:AverageBloodPressureSNOMED.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -481,6 +500,12 @@
       <comment value="additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system." />
       <alias value="Component Test" />
       <alias value="Component Name" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="8358-4" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:cuffTypeLOINC.code.coding">
       <path value="Observation.component.code.coding" />
@@ -537,6 +562,12 @@
       <comment value="additional codes that translate or map to this code are allowed.  For example a more granular SNOMED code or code that is used locally in a system." />
       <alias value="Component Test" />
       <alias value="Component Name" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="70665002" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:cuffTypeSNOMED.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -583,6 +614,16 @@
       <path value="Observation.component" />
       <sliceName value="positionSNOMED" />
       <max value="1" />
+    </element>
+    <element id="Observation.component:positionSNOMED.code">
+      <path value="Observation.component.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="424724000" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:positionSNOMED.code.coding">
       <path value="Observation.component.code.coding" />
@@ -633,6 +674,16 @@
       <path value="Observation.component" />
       <sliceName value="positionLOINC" />
       <max value="1" />
+    </element>
+    <element id="Observation.component:positionLOINC.code">
+      <path value="Observation.component.code" />
+      <fixedUri value="http://loinc.org" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="8361-8" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:positionLOINC.code.coding.system">
       <path value="Observation.component.code.coding.system" />

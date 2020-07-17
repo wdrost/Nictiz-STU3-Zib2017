@@ -81,12 +81,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -96,6 +92,10 @@
       <path value="Observation.code.coding" />
       <sliceName value="1MinuteApgarScore" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="9272-6" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:1MinuteApgarScore.system">
       <path value="Observation.code.coding.system" />

@@ -89,8 +89,8 @@
       <path value="Condition.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -101,6 +101,10 @@
       <sliceName value="PressureUlcerCode" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="399912005" />
+      </patternCoding>
     </element>
     <element id="Condition.code.coding:PressureUlcerCode.system">
       <path value="Condition.code.coding.system" />

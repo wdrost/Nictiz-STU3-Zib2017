@@ -188,8 +188,8 @@
       <path value="Procedure.category.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -199,6 +199,10 @@
       <sliceName value="nursingInterventionCode" />
       <short value="NursingInterventionCode" />
       <definition value="Category snomed code used for indexing/retrieval of the HCIM NursingIntervention." />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="9632001" />
+      </patternCoding>
     </element>
     <element id="Procedure.category.coding:nursingInterventionCode.system">
       <path value="Procedure.category.coding.system" />
@@ -240,6 +244,9 @@
     <element id="Procedure.code.coding:interventionNICCodelist">
       <path value="Procedure.code.coding" />
       <sliceName value="interventionNICCodelist" />
+      <patternCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.15" />
+      </patternCoding>
       <binding>
         <strength value="required" />
         <description value="NIC - All Values" />
@@ -257,6 +264,9 @@
     <element id="Procedure.code.coding:interventionSnomedCodelist">
       <path value="Procedure.code.coding" />
       <sliceName value="interventionSnomedCodelist" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
       <binding>
         <strength value="required" />
         <description value="SNOMED CT - SNOMED CT: &lt;&lt;71388002 | procedure |" />

@@ -45,8 +45,8 @@
       <path value="Condition.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -57,6 +57,10 @@
       <sliceName value="PregnancyObservable" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="364320009" />
+      </patternCoding>
     </element>
     <element id="Condition.code.coding:PregnancyObservable.system">
       <path value="Condition.code.coding.system" />

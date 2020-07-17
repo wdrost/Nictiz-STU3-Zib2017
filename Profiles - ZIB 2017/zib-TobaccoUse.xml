@@ -70,8 +70,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -80,6 +80,10 @@
       <path value="Observation.code.coding" />
       <sliceName value="TobaccoUseCode" />
       <short value="TobaccoUseCode" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="365980008" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:TobaccoUseCode.system">
       <path value="Observation.code.coding.system" />
@@ -205,8 +209,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -220,6 +224,12 @@
       <path value="Observation.component.code" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="The exact snomed code for this concept is not yet determined. More information on the status of this terminology binding, please check the public issue https://bits.nictiz.nl/browse/ZIB-562 ." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="53661000146106" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:TypeOfTobaccoUsed.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -275,6 +285,12 @@
       <path value="Observation.component.code" />
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Correcct terminology needed. Same code is now used for TypeOfTobaccoUsed and Amount. Therefore the component.code.coding.code is not yet fixed." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="266918002" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:Amount.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -331,6 +347,12 @@
     <element id="Observation.component:PackYears.code">
       <path value="Observation.component.code" />
       <definition value="A reference to a code defined by a terminology system." />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="401201003" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:PackYears.code.coding.system">
       <path value="Observation.component.code.coding.system" />

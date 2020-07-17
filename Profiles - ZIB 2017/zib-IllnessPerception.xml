@@ -38,8 +38,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -47,7 +47,11 @@
     <element id="Observation.code.coding:illnessPerceptionCode">
       <path value="Observation.code.coding" />
       <sliceName value="illnessPerceptionCode" />
-      <mapping>
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="363910003" />
+      </patternCoding>
+            <mapping>
         <identity value="hcim-IllnessPerception-v3.1-2017EN" />
         <map value="NL-CM:18.5.1" />
         <comment value="IllnessPerception" />

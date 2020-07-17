@@ -58,8 +58,8 @@
       <path value="CarePlan.category.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -70,6 +70,10 @@
       <sliceName value="helpFromOthersCode" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="243114000" />
+      </patternCoding>
     </element>
     <element id="CarePlan.category.coding:helpFromOthersCode.system">
       <path value="CarePlan.category.coding.system" />

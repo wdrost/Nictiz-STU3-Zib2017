@@ -39,8 +39,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -51,6 +51,10 @@
       <sliceName value="SNAQrcScoreCode" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="108311000146106" />
+      </patternCoding>
       <mapping>
         <identity value="hcim-SNAQrcScore-v1.0" />
         <map value="NL-CM:4.29.1" />

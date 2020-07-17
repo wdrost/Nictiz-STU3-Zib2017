@@ -163,20 +163,24 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code.coding.system" />
-        </discriminator>
-        <ordered value="false" />
         <rules value="open" />
       </slicing>
     </element>
     <element id="Observation.component:extraOxygenAdministration">
       <path value="Observation.component" />
       <sliceName value="extraOxygenAdministration" />
+    </element>
+    <element id="Observation.component:extraOxygenAdministration.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="74206-4" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:extraOxygenAdministration.code.coding">
       <path value="Observation.component.code.coding" />

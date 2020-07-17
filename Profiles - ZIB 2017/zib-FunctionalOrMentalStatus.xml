@@ -120,8 +120,8 @@
       <path value="Observation.category.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -132,6 +132,10 @@
       <short value="Functional Finding" />
       <definition value="Category snomed code used for indexing/retrieval of observerd functional status." />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="118228005" />
+      </patternCoding>
     </element>
     <element id="Observation.category.coding:functionalCode.system">
       <path value="Observation.category.coding.system" />
@@ -151,6 +155,10 @@
       <short value="Mental state, behavior and/or psychosocial function finding" />
       <definition value="Category snomed code used for indexing/retrieval of observerd mental status." />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="384821006" />
+      </patternCoding>
     </element>
     <element id="Observation.category.coding:mentalCode.system">
       <path value="Observation.category.coding.system" />

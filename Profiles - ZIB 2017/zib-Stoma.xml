@@ -58,8 +58,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -67,6 +67,10 @@
     <element id="Observation.code.coding:stomaCode">
       <path value="Observation.code.coding" />
       <sliceName value="stomaCode" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="245857005" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:stomaCode.system">
       <path value="Observation.code.coding.system" />

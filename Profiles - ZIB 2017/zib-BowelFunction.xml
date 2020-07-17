@@ -63,8 +63,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -75,6 +75,10 @@
       <sliceName value="bowelFunctionCoding" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="111989001" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:bowelFunctionCoding.system">
       <path value="Observation.code.coding.system" />

@@ -70,8 +70,8 @@
       <path value="Observation.code.coding" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -80,6 +80,10 @@
       <path value="Observation.code.coding" />
       <sliceName value="drugUseCode" />
       <short value="DrugUseCode" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="228366006" />
+      </patternCoding>
     </element>
     <element id="Observation.code.coding:drugUseCode.system">
       <path value="Observation.code.coding.system" />
@@ -211,8 +215,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -222,6 +226,15 @@
       <sliceName value="DrugOrMedicationType" />
       <definition value="Some observations have multiple component observations. These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations." />
       <max value="1" />
+    </element>
+    <element id="Observation.component:DrugOrMedicationType.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365469004" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:DrugOrMedicationType.code.coding.system">
       <path value="Observation.component.code.coding.system" />
@@ -282,6 +295,15 @@
       <path value="Observation.component" />
       <sliceName value="RouteOfAdministration" />
     </element>
+    <element id="Observation.component:RouteOfAdministration.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="410675002" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.component:RouteOfAdministration.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
@@ -340,6 +362,15 @@
     <element id="Observation.component:Amount">
       <path value="Observation.component" />
       <sliceName value="Amount" />
+    </element>
+    <element id="Observation.component:Amount.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="228390007" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:Amount.code.coding.system">
       <path value="Observation.component.code.coding.system" />
