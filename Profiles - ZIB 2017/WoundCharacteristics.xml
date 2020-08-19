@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="WoundCharacteristics" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics" />
@@ -495,6 +496,17 @@
         <map value="NL-CM:19.2.11" />
         <comment value="WoundEdge" />
       </mapping>
+    </element>
+    <element id="Observation.component:WoundImage">
+      <path value="Observation.component" />
+      <sliceName value="WoundImage" />
+    </element>
+    <element id="Observation.component:WoundImage.value[x]:valueAttachment">
+      <path value="Observation.component.valueAttachment" />
+      <sliceName value="valueAttachment" />
+      <type>
+        <code value="Attachment" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
