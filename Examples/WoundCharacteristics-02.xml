@@ -82,4 +82,19 @@
             <code value="cm"/>
         </valueQuantity>
     </component>
+    <component><!-- WoundImage -->
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="446080005"/>
+                <display value="Photography of wound (procedure)"/>
+            </coding>
+        </code>
+        <valueAttachment>
+            <contentType value="image/png"/>
+            <language value="en-AU"/>
+            <url value="http://www.acme.com/logo-small.png"/>
+            <title value="Official Corporate Logo"/>
+        </valueAttachment>
+    </component>
 </Observation>

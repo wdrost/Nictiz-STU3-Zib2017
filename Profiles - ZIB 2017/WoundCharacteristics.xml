@@ -45,26 +45,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:woundImage">
-      <path value="Observation.extension" />
-      <sliceName value="woundImage" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/observation-woundImage" />
-      </type>
-    </element>
-    <element id="Observation.extension:woundImage.valueAttachment:valueAttachment">
-      <path value="Observation.extension.valueAttachment" />
-      <sliceName value="valueAttachment" />
-      <short value="WoundImage" />
-      <definition value="A photo of the wound." />
-      <alias value="WondFoto" />
-      <mapping>
-        <identity value="hcim-wound-v3.1-2017EN" />
-        <map value="NL-CM:19.2.15" />
-        <comment value="WoundPhoto" />
-      </mapping>
-    </element>
     <element id="Observation.extension:reasonReference">
       <path value="Observation.extension" />
       <sliceName value="reasonReference" />
