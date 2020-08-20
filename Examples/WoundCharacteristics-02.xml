@@ -85,9 +85,9 @@
     <component><!-- WoundImage -->
         <code>
             <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="446080005"/>
-                <display value="Photography of wound (procedure)"/>
+                <system value="http://loinc.org"/>
+                <code value="72170-4"/>
+                <display value="Photographic image"/>
             </coding>
         </code>
         <valueAttachment>
