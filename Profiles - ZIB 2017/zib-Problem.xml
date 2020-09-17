@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="zib-Problem" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
@@ -209,6 +210,13 @@
     </element>
     <element id="Condition.category">
       <path value="Condition.category" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="ProblemType" />
       <definition value="The type of problem; see the profile description." />
       <alias value="ProbleemType" />
@@ -235,6 +243,17 @@
         <map value="NL-CM:5.1.8" />
         <comment value="ProblemType" />
       </mapping>
+    </element>
+    <element id="Condition.category:problemType">
+      <path value="Condition.category" />
+      <sliceName value="problemType" />
+      <binding>
+        <strength value="extensible" />
+        <description value="The type of problem." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.1--20171231000000" />
+        </valueSetReference>
+      </binding>
     </element>
     <element id="Condition.code">
       <path value="Condition.code" />
@@ -272,9 +291,6 @@
       <definition value="Anatomical location which is the focus of the procedure." />
       <alias value="ProbleemAnatomischeLocatie" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="BodySite" />
-        </extension>
         <strength value="extensible" />
         <description value="ProbleemAnatomischeLocatieCodelijst" />
         <valueSetReference>
@@ -352,10 +368,10 @@
     </element>
     <element id="Condition.onset[x]:onsetDateTime">
       <path value="Condition.onsetDateTime" />
+      <sliceName value="onsetDateTime" />
       <short value="ProblemStartDate" />
       <definition value="Start of the disorder to which the problem applies. Especially in symptoms in which it takes longer for the final diagnosis, it is important to know not only the date of the diagnosis, but also how long the patient has had the disorder. A ‘vague’ date, such as only the year or the month and the year, is permitted." />
       <alias value="ProbleemBeginDatum" />
-      <sliceName value="onsetDateTime" />
       <type>
         <code value="dateTime" />
       </type>
@@ -382,10 +398,10 @@
     </element>
     <element id="Condition.abatement[x]:abatementDateTime">
       <path value="Condition.abatementDateTime" />
+      <sliceName value="abatementDateTime" />
       <short value="ProblemEndDate" />
       <definition value="Date on which the disorder to which the problem applies, is considered not to be present anymore. This date does not need to be the same as the date of the change in problem status. A ‘vague’ date, such as only the year or the month and the year, is permitted." />
       <alias value="ProbleemEindDatum" />
-      <sliceName value="abatementDateTime" />
       <type>
         <code value="dateTime" />
       </type>
